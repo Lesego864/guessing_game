@@ -46,12 +46,18 @@ button:hover {
     color: #354F52;
 }
 
-.guess_up {
+.guessbtn {
     margin-top: 1em;
 }
 
 .footer {
-    padding-top: 1em;
+    margin-top: 8.5em;
+}
+
+@media (max-width: 650px) {
+    .footer {
+        margin-top: -1em;
+    }
 }
 
 
@@ -89,6 +95,7 @@ h4 {
 h5 {
     font-size: 1rem;
     color: #D4A373;
+    font-weight: lighter;
 }
 
 h6 {
@@ -283,4 +290,12 @@ p {
         width: 75%;
         max-width: 60rem;
     }
+}
+
+.container {
+    width: 75%;
+    max-width: 60rem;
+}
+
+
 }
