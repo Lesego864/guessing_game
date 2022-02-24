@@ -10,7 +10,7 @@
 </head>
 
 <body>
-    <div class="container">
+    <div id="container">
         <div class="row">
             <div class="col-12">
                 <h1>What's That Number?! </h1>
@@ -23,20 +23,17 @@
                     <br />have what it takes to think like a genius!</h5>
                 <img src="knowledge-clipart-genius-brain.png" width="170">
                 <div class="startbtn">
-                    <button>START GAME!</button>
+                    <button id="startbtn">START GAME!</button>
                 </div>
             </div>
         </div>
-        <div class="row game">
-            <div class="enter_number hide">
-                Enter Your Number: <input type="text" class="enter">
-            </div>
-            <div class="guess">
-                <button class="guessbtn hide">GUESS!</button>
-            </div>
-            <div class="message hide"></div>
-
-        </div>
+    </div>
+    <div id="container">
+        <h5>We have selected a random number between 1 and 100.<br /> See if you can guess it in 5 turns or fewer!</h5>
+        <h5 id="outputtext">Enter a number below:</h5>
+        <input type="text" id="userinput">
+        <button id="enterbtn">GUESS!</button>
+        <button id="againbtn">TRY AGAIN!</button>
     </div>
     <div class="footer">
         <h6>Lesego Tshipu | Guessing Game | Google Workplace Incubation 2022</h6>

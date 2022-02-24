@@ -1,67 +1,29 @@
 const startButtonElement = document.querySelector(".startbtn");
-const enterNumberElement = document.querySelector(".enter_number");
-const guessButtonElement = document.querySelector(".guessbtn");
-const messageElement = document.querySelector(".message");
+let enterButton = document.getElementById("enterbtn");
+let againButton = document.getElementById("againbtn");
+let output = document.getElementById("outputtext");
 
+let randomNumber = Math.ceil((Math.random() * 100));
 
-let randomNumber = Math.ceil((Math.random() * 100)).toFixed(0);
-var numberGuessed = 0;
+enterButton.addEventListener('click', checkNumber);
 
+function checkNumber() {
+    let input = document.getElementById("userinput").value;
+    if (input == randomNumber) {
+        output.innerHTML = "Correct, the secret number is " + randomNumber + "!";
+        output.style.color = "green";
 
-startButtonElement.addEventListener('click', startButton);
+    } else if (input > randomNumber && input < 100) {
+        output.innerHTML = "Your guess is too high!";
+        output.style.color = "red";
 
-function startButton() {
-    enterNumberElement.classList.remove("hide");
-    guessButtonElement.classList.remove("hide")
-};
-
-
-guessButtonElement.addEventListener('click', guessButton);
-
-function guessButton() {
-    if (numberGuessed < randomNumber.value) {
-        messageElement.innerHTML = "Sorry, Your guess is too low!";
-        setTimeout(function() {
-            messageElement.classList.remove("hide")
-        }, 1000);
-        setTimeout(function() {
-            window.location.reload();
-        }, 3000);
-        hideMessage();
-
-    } else if (numberGuessed > randomNumber.value) {
-
-        messageElement.innerHTML = "Sorry, Your guess is too high!";
-        setTimeout(function() {
-            messageElement.classList.remove("hide")
-        }, 1000);
-        setTimeout(function() {
-            window.location.reload();
-        }, 3000);
-        hideMessage();
-
-    } else if (numberGuessed = randomNumber.value) {
-        messageElement.innerHTML = "Correct, the secret number is " + randomNumber;
-        // $ { number };
-        setTimeout(function() {
-            messageElement.classList.remove("hide")
-        }, 1000);
-        setTimeout(function() {
-            window.location.reload();
-        }, 3000);
+    } else {
+        output.innerHTML = "Your guess is too low!";
+        output.style.color = "red";
     }
-    hideMessage();
-};
-
-function hideMessage() {
-    setTimeout(function() {
-        messageElement.classList.add("hide")
-    }, 3000);
-    setTimeout(function() {
-        enterNumberElement.classList.add("hide")
-    }, 3000);
-    setTimeout(function() {
-        guessButtonElement.classList.add("hide")
-    }, 3000);
-
 }
+
+againButton.addEventListener('click', function() {
+    location.reload();
+    output.innerHTML = "New game started!"
+});
