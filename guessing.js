@@ -2,8 +2,15 @@ let startButton = document.getElementById("startbtn");
 let enterButton = document.getElementById("enterbtn");
 let againButton = document.getElementById("againbtn");
 let output = document.getElementById("outputtext");
+let container = document.getElementById("container2");
 
 let randomNumber = Math.ceil((Math.random() * 100));
+
+startButton.addEventListener('click', pressStartButton);
+
+function pressStartButton() {
+    container.classList.add("hide");
+}
 
 enterButton.addEventListener('click', checkNumber);
 
@@ -48,6 +55,8 @@ function checkNumber() {
 }
 
 againButton.addEventListener('click', function() {
+
+    let randomNumber = Math.ceil((Math.random() * 100));
     location.reload();
-    output.innerHTML = "New game started!"
+    output.innerHTML = ""
 });
