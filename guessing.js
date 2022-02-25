@@ -28,13 +28,13 @@ function checkNumber() {
         // }, 3000);
 
         setTimeout(function() {
-            // location.reload();
+
             let randomNumber = Math.ceil((Math.random() * 100));
             output.innerHTML = "New game started!";
         }, 5000);
 
         setTimeout(function() {
-
+            location.reload();
             output.innerHTML = "";
         }, 8000);
 
