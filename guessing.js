@@ -15,11 +15,13 @@ function checkNumber() {
         output.innerHTML = "Your guess is too high!";
         output.style.color = "red";
 
-    } else if (input > randomNumber && input > 1) {
+        // } else (input > randomNumber && input > 1) {
+    } else {
         output.innerHTML = "Your guess is too low!";
         output.style.color = "red";
+    }
 
-    } else if (input == randomNumber) {
+    if (input == randomNumber) {
         // setTimeout(function() {
         output.innerHTML = "Correct, the secret number is " + randomNumber + "!";
         output.style.color = "green";
