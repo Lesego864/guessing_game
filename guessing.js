@@ -25,14 +25,20 @@ function checkNumber() {
         // setTimeout(function() {
         output.innerHTML = "Correct, the secret number is " + randomNumber + "!";
         output.style.color = "green";
-        // }, 5000);
+        // }, 3000);
 
         setTimeout(function() {
             // location.reload();
             let randomNumber = Math.ceil((Math.random() * 100));
             output.innerHTML = "New game started!";
-        }, 3000);
-        output.innerHTML = "";
+        }, 5000);
+
+        setTimeout(function() {
+
+            output.innerHTML = "";
+        }, 8000);
+
+        // output.innerHTML = "";
 
 
 
