@@ -2,15 +2,23 @@ let startButton = document.getElementById("startbtn");
 let enterButton = document.getElementById("enterbtn");
 let againButton = document.getElementById("againbtn");
 let output = document.getElementById("outputtext");
-let container = document.getElementById("container2");
+let container = document.getElementById("container2 hide");
 
 let randomNumber = Math.ceil((Math.random() * 100));
 
-startButton.addEventListener('click', pressStartButton);
+// startButton.addEventListener('click', pressStartButton);
 
-function pressStartButton() {
-    container.classList.add("hide");
-}
+// function pressStartButton() {
+//     container.classList.remove("hide");
+// }
+
+// function hideGame() {
+
+//     setTimeout(function() {
+//         container.classList.add("hide")
+//     }, 3000);
+
+// }
 
 enterButton.addEventListener('click', checkNumber);
 

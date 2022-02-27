@@ -12,9 +12,15 @@ body {
     font-size: medium;
 }
 
-.hide {
-    display: none;
+#container2 {
+    margin-bottom: 2em;
+    margin-top: 5em;
 }
+
+
+/* .hide {
+    display: none;
+} */
 
 #startbtn {
     margin-top: 0.3em;
@@ -74,8 +80,29 @@ body {
     text-decoration: turquoise;
 }
 
+#endbtn {
+    margin-top: 5em;
+    margin-bottom: 2em;
+    color: #606C38;
+    margin-bottom: 1em;
+    border-radius: 1.5em;
+    background-color: transparent;
+    font-weight: lighter;
+    border-color: #979DAC;
+}
+
+#endbtn:hover {
+    cursor: pointer;
+    box-shadow: 5px 10px 20px #DDA15E;
+    text-decoration: turquoise;
+}
+
 .footer {
-    margin-top: 7em;
+    margin-top: 3em;
+}
+
+.second_footer {
+    margin-top: 17em;
 }
 
 @media (max-width: 650px) {
@@ -122,6 +149,7 @@ h5 {
     font-size: 1rem;
     color: #606C38;
     font-weight: lighter;
+    margin-top: 6em;
 }
 
 h6 {
@@ -322,7 +350,4 @@ p {
 .container {
     width: 75%;
     max-width: 60rem;
-}
-
-
 }
