@@ -54,13 +54,18 @@ function checkNumber() {
         }, 8000);
 
         // output.innerHTML = "";
-
-
-
         // output.innerHTML = "New game started!"
-
     }
-}
+
+    if (input < 1) {
+        output.innerHTML = "Your guess is out of range!";
+        output.style.color = "blue"
+    }
+    if (input > 100) {
+        output.innerHTML = "Your guess is out of range!";
+        output.style.color = "blue"
+    }
+};
 
 againButton.addEventListener('click', function() {
 
